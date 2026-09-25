@@ -1,0 +1,32 @@
+{
+    "name": "fabric-interrogator",
+    "version": "0.1.0",
+    "description": "Gets commissioned onto a Matter fabric, discovers all devices, and displays their attributes",
+    "private": true,
+    "license": "MIT",
+    "author": "Chernyshov",
+    "type": "module",
+    "scripts": {
+        "prepare": "tsc",
+        "build": "tsc",
+        "app": "node --enable-source-maps dist/FabricInterrogator.js",
+        "clean": "node -e 'fs.rmSync(\"dist\", { recursive: true, force: true })'"
+    },
+    "engines": {
+        "node": ">=20.19.0 <22.0.0 || >=22.13.0"
+    },
+    "dependencies": {
+        "@matter/main": "0.16.10",
+        "@matter/model": "0.16.10",
+        "@matter/protocol": "0.16.10",
+        "@matter/types": "0.16.10",
+        "@project-chip/matter.js": "0.16.10"
+    },
+    "optionalDependencies": {
+        "@matter/nodejs-ble": "0.16.10"
+    },
+    "devDependencies": {
+        "@types/node": "^24.13.6",
+        "typescript": "~5.9.3"
+    }
+}
